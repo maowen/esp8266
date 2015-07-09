@@ -109,6 +109,8 @@ void user_init (void)
 
 ## Flashing
 
+Flash with `esptool.py` over UART up to 454800 baud. `esptool.py` is included in the `esp-open-sdk`.
+
 ## WiFi Features
 
 1. Protocols b/g/n
@@ -232,4 +234,3 @@ Flash device, run throughput test
 * [Power Consumption](https://nurdspace.nl/ESP8266#Ultra-low_power_technology)
 * [Hackaday](http://hackaday.com/2015/03/18/how-to-directly-program-an-inexpensive-esp8266-wifi-module/)
 
-Flash with `esptool.py` over UART up to 454000 baud.
