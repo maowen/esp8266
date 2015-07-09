@@ -4,6 +4,8 @@
 
 ## What is it?
 
+"Yue Xin intelligent high performance wireless connectivity platform --ESCP SOC, designers bring the Gospel to the mobile platform, it At the lowest cost to provide maximum usability for WiFi capabilities embedded in other systems offer unlimited possibilities."
+
 Initially all the ESP8266 datasheets and documentation were in Chinese. Now, thanks to the hacker community the datasheets and SDK documentation are available in English. The SDK is very recently (June 2015) out of Beta and a number of functional libraries are available. The community has done the hard part and  the scene is ready for mere mortals to get involved!
 
 
