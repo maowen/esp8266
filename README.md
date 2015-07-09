@@ -26,7 +26,6 @@ Initially all the ESP8266 datasheets and documentation were in Chinese. Now, tha
 * Up to 16 GPIO pins
 * Small BOM - 4 capacitors, a oscillator, and an external flash.
 * Nominal active WiFi power consumption ~200mA
-* Small 
 
 ## Potential Applications
 
@@ -41,22 +40,9 @@ Initially all the ESP8266 datasheets and documentation were in Chinese. Now, tha
 
 ## Getting Started
 
-### Hardware Requirements
-
-#### For ESP-01 Module:
-
-<img src="https://hackadaycom.files.wordpress.com/2015/03/setup1.png" width="450">
-
-1. ESP-01 module
-2. 3.3V regulator/power supply 
-3. A breadboard and Dupont wires
-4. USB/TTL converter
-5. 1K and 2.2K resistors
-6. Optionally a carrying board
+See [www.esp8266.com Getting Started](http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266)
 
 ## What to buy?
-
-See [www.esp8266.com Getting Started](http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266)
 
 ###Third Party Vendor Modules
 
@@ -88,6 +74,30 @@ See [ESP8266 Module Family](http://www.esp8266.com/wiki/doku.php?id=esp8266-modu
 
 * [Taobao](http://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-10057817917.2.f1LTR1&id=42107731541) $1.77 + S&H
 
+## Hardware Requirements
+
+#### For ESP-01 Module:
+
+<img src="https://hackadaycom.files.wordpress.com/2015/03/setup1.png" width="450">
+
+1. ESP-01 module
+2. 3.3V regulator/power supply 
+3. A breadboard and Dupont wires
+4. USB/TTL converter
+5. 1K and 2.2K resistors
+6. Optionally a carrying board
+
+##Architecture
+
+Event driven software architecture. `int main()` is not exposed to the user. It is run and managed by the device. 
+Here are some of the mechanisms for running your code:
+
+* Event callbacks
+* Timer driven events
+* Task - limited to three with three differet priority levels
+* `void user_init (void)` - Called early during device intialization
+
+
 ## Firmware
 
 1. AT+ - WiFi-to-Serial bridge for external MCU
@@ -97,15 +107,6 @@ See [ESP8266 Module Family](http://www.esp8266.com/wiki/doku.php?id=esp8266-modu
 
 By default most modules ship with the "AT" firmware
 
-##Architecture
-
-`int main()` is not exposed to the user. It is run and managed by the device and 
-```C
-void user_init (void)
-{
-    // Called early during device initialization
-}
-```
 
 ## Flashing
 
@@ -119,17 +120,6 @@ Flash with `esptool.py` over UART up to 454800 baud. `esptool.py` is included in
 4. ROM based DHCP server
 
 #SDK
-
-##Architecture
-
-Event driven software architecture. `int main()` is not exposed to the user. It is run and managed by the device. 
-Here are some of the mechanisms for running your code:
-
-* Event callbacks
-* Timer driven events
-* Task - limited to three with three differet priority levels
-* `void user_init (void)` - Called early during device intialization
-
 
 ## ROM API
 
